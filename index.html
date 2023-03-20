@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./index.css" rel="stylesheet">
+  <link href="./normalize.css" rel="stylesheet">
+</head>
+<body class="page">
+  <main class="container">
+    <h1 class="title">Добавить комментарий</h1>
+    <form class="block" novalidate>
+      <input id="name-input" type="text" placeholder="Ваше имя" class="input input__text input__name" minlength="3"
+        maxlength="25" pattern="^[A-zА-я]+$" required>
+      <span class="name-input-error"></span>
+      <input type="date" class="data">
+      <textarea id="textarea-input" placeholder="Введите комментарий" class="input input__text textarea"
+        minlength="2" required></textarea>
+      <span class="textarea-input-error"></span>
+      <button class="button button_action_add">
+        Добавить комментарий
+      </button>
+    </form>
+    <div class="block">
+      <h3>Комментарии</h3>
+      <div class="comment-container"></div>
+    </div>
+  </main>
+
+  <template id="comment-template">
+    <div class="comment">
+      <div class="comment__info">
+        <h4 class="comment__name"></h4>
+        <p class="comment__time"></p>
+        <button class="comment__like"></button>
+        <button class="comment__delete"></button>
+      </div>
+      <p class="comment__text"></p>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
